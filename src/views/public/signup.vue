@@ -81,20 +81,17 @@ export default defineComponent({
     const password = ref("");
     const errors = ref({
       email: false,
-      passord: false,
+      password: false,
     });
     const eMsg = ref({
       email: "This field is required",
       password: "This field is required",
     });
-
-    const login = () => {};
     return {
       email,
       password,
       errors,
       eMsg,
-      login,
     };
   },
 });
