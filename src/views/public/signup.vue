@@ -1,11 +1,12 @@
 <template>
   <div class="container">
     <div class="page-wrapper">
-      <div class="brand">
+      <div class="brand mb-2">
         <img src="@/assets/images/logo.png" alt="" /> TRANSPORT
       </div>
       <div class="form-side">
-        <form>
+        <h2 class="text-center mb-4">Login</h2>
+        <form @submit.prevent="login">
           <div class="each-input">
             <div class="input-group">
               <span class="input-group-text">
@@ -55,7 +56,7 @@
             </div>
           </div>
 
-          <div class="pass-reminder mt-5 d-flex">
+          <div class="pass-reminder mt-1 d-flex">
             <div class="checkbox"><input type="checkbox" /> Remember Me</div>
             <div>
               <h6 class="password">Forgot Password?</h6>
@@ -63,7 +64,7 @@
           </div>
 
           <div>
-            <button type="submit" class="sign-in-btn mt-4">Sign In</button>
+            <button type="submit" class="sign-in-btn mt-4">Login</button>
           </div>
         </form>
       </div>
@@ -87,11 +88,34 @@ export default defineComponent({
       email: "This field is required",
       password: "This field is required",
     });
+
+    const login = () => {
+      if (email.value === "") {
+        errors.value.email = true;
+      } else if (
+        !email.value.match(
+          /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+        )
+      ) {
+        errors.value.email = true;
+        eMsg.value.email = "Invalid Email";
+      } else {
+        errors.value.email = false;
+      }
+
+      if (password.value === "") {
+        errors.value.password = true;
+      } else {
+        errors.value.password = false;
+      }
+      console.log(email.value, password.value);
+    };
     return {
       email,
       password,
       errors,
       eMsg,
+      login,
     };
   },
 });
@@ -120,7 +144,7 @@ export default defineComponent({
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 }
 form .each-input {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 form .input-group {
   height: 45px;
@@ -147,7 +171,7 @@ form .input-group .input-group-text {
   background-color: rgb(3, 110, 44);
   border: 0;
   color: #fff;
-  border-radius: 8px;
+  border-radius: 6px;
 }
 .error-msg {
   color: red;
