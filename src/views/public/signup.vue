@@ -22,7 +22,7 @@
                 </svg>
               </span>
               <input
-                type="email"
+                type="text"
                 v-model="email"
                 placeholder="Email"
                 class="form-control"
@@ -56,13 +56,6 @@
             </div>
           </div>
 
-          <div class="pass-reminder mt-1 d-flex">
-            <div class="checkbox"><input type="checkbox" /> Remember Me</div>
-            <div>
-              <h6 class="password">Forgot Password?</h6>
-            </div>
-          </div>
-
           <div>
             <button type="submit" class="sign-in-btn mt-4">Login</button>
           </div>
@@ -90,7 +83,7 @@ export default defineComponent({
     });
 
     const login = () => {
-      if (email.value === "") {
+      if (email.value == "") {
         errors.value.email = true;
       } else if (
         !email.value.match(
@@ -103,7 +96,7 @@ export default defineComponent({
         errors.value.email = false;
       }
 
-      if (password.value === "") {
+      if (password.value == "") {
         errors.value.password = true;
       } else {
         errors.value.password = false;
@@ -152,17 +145,6 @@ form .input-group {
 form .input-group .input-group-text {
   background: none;
   cursor: pointer;
-}
-.pass-reminder {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.password {
-  color: black;
-  font-size: 14px;
-  font-weight: 400;
 }
 
 .sign-in-btn {
