@@ -27,6 +27,13 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
 #sidebarToggle {
   display: block;
 }
+
+#initials {
+  height: 40px;
+  width: 40px;
+  border: 1px solid grey;
+  border-radius: 50%;
+}
 @media (min-width: 768px) {
   #sidebarToggle {
     display: none;
