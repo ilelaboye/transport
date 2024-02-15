@@ -9,7 +9,7 @@ const router = createRouter({
       component: DashboardLayout,
       children: [
         {
-          path: "",
+          path: "/dashboard",
           component: Dashboard,
         },
       ],
