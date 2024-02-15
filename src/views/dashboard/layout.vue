@@ -2,7 +2,11 @@
   <div class="d-flex" id="wrapper">
     <!-- Sidebar-->
     <div class="border-end bg-white" id="sidebar-wrapper">
-      <div class="sidebar-heading border-bottom bg-light">Start Bootstrap</div>
+      <div
+        class="sidebar-heading border-bottom bg-white d-flex justify-content-center py-3"
+      >
+        <img src="@/assets/images/logo.png" class="logo h-100" />
+      </div>
       <div class="list-group list-group-flush">
         <a
           class="list-group-item list-group-item-action list-group-item-light p-3"
@@ -42,7 +46,7 @@
       <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
         <div class="container-fluid">
           <button class="btn btn-primary" id="sidebarToggle">
-            Toggle Menu
+            Toggle Menuss
           </button>
           <button
             class="navbar-toggler"
@@ -107,3 +111,25 @@
     </div>
   </div>
 </template>
+<script setup lang="ts">
+  const toggleSidebar = () => {};
+</script>
+
+<style lang="scss" scoped>
+  #wrapper {
+    #page-content-wrapper {
+      background-color: #fff;
+    }
+    /* min-height: 100vh;
+    #sidebar-wrapper {
+      width: 27em;
+      .sidebar-heading {
+      }
+    }
+    #page-content-wrapper {
+      .navbar {
+        height: 57px;
+      }
+    } */
+  }
+</style>
