@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
-import DashboardLayout from "../views/dashboard/layout.vue";
-import Dashboard from "../views/dashboard/dashboard.vue";
+import DashboardLayout from "@/views/dashboard/layout.vue";
+import Dashboard from "@/views/dashboard/dashboard.vue";
+import Staff from "@/views/dashboard/staff.vue";
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -11,6 +13,10 @@ const router = createRouter({
         {
           path: "/dashboard",
           component: Dashboard,
+        },
+        {
+          path: "/staff",
+          component: Staff,
         },
       ],
     },
