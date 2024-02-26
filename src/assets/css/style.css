@@ -36,6 +36,7 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
 }
 #sidebarToggleClose {
   display: none;
+  width: 50px;
 
   .close-button {
     font-size: 22px;

@@ -35,10 +35,7 @@
         >
       </div>
     </div>
-
-    <!-- Page content wrapper-->
     <div id="page-content-wrapper">
-      <!-- Top navigation-->
       <nav class="navbar navbar-expand-lg navbar-light border-bottom">
         <div class="container-fluid">
           <div class="toggle-icons">
