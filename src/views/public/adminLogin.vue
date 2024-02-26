@@ -114,50 +114,58 @@ export default defineComponent({
 });
 </script>
 
-<style>
+<style lang="scss" scoped>
 .container {
   height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  .page-wrapper .brand {
+    text-align: center;
+  }
+  .brand img {
+    height: 40px;
+    margin-bottom: 23px;
+  }
 }
-.page-wrapper .brand {
-  text-align: center;
-}
-.page-wrapper .brand img {
-  height: 40px;
-  margin-bottom: 23px;
-}
+
 .form-side {
-  padding: 25px;
+  padding: 20px;
   width: 450px;
   height: fit-content;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-}
-form .each-input {
-  margin-bottom: 25px;
-}
-form .input-group {
-  height: 45px;
-}
-form .input-group .input-group-text {
-  background: none;
-  cursor: pointer;
+  .each-input {
+    margin-bottom: 25px;
+  }
+  .input-group {
+    height: 45px;
+  }
+  .input-group-text {
+    background: none;
+    cursor: pointer;
+  }
+
+  .sign-in-btn {
+    width: 100%;
+    height: 48px;
+    background-color: rgb(3, 110, 44);
+    border: 0;
+    color: #fff;
+    border-radius: 6px;
+  }
+  .error-msg {
+    color: red;
+    font-size: 12px;
+    margin-left: 40px;
+  }
 }
 
-.sign-in-btn {
-  width: 100%;
-  height: 48px;
-  background-color: rgb(3, 110, 44);
-  border: 0;
-  color: #fff;
-  border-radius: 6px;
-}
-.error-msg {
-  color: red;
-  font-size: 12px;
-  margin-left: 40px;
+@media only screen and (max-width: 576px) {
+  .form-side {
+    max-width: 85vw;
+  }
 }
 </style>

@@ -10,27 +10,27 @@
       <div class="list-group list-group-flush">
         <a
           class="list-group-item list-group-item-action list-group-item-light p-3"
-          href="http://localhost:5173/dashboard"
+          href="/dashboard"
           >Dashboard</a
         >
         <a
           class="list-group-item list-group-item-action list-group-item-light p-3"
-          href="#!"
+          href="/schools"
           >Schools</a
         >
         <a
           class="list-group-item list-group-item-action list-group-item-light p-3"
-          href="#!"
+          href="/students"
           >Students</a
         >
         <a
           class="list-group-item list-group-item-action list-group-item-light p-3"
-          href="http://localhost:5173/staff"
+          href="/staff"
           >Staffs</a
         >
         <a
           class="list-group-item list-group-item-action list-group-item-light p-3"
-          href="#!"
+          href="/dashboard"
           >Drives</a
         >
       </div>
@@ -41,9 +41,15 @@
       <!-- Top navigation-->
       <nav class="navbar navbar-expand-lg navbar-light border-bottom">
         <div class="container-fluid">
-          <button class="btn" id="sidebarToggle">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+          <div class="toggle-icons">
+            <button class="btn" id="sidebarToggle">
+              <span class="navbar-toggler-icon menu-bar"></span>
+            </button>
+            <button class="btn" id="sidebarToggleClose">
+              <span class="btn-close close-button"></span>
+            </button>
+          </div>
+
           <div id="empty-div"></div>
           <div id="initials">
             <h6 class="d-flex justify-content-center py-2">T B</h6>
@@ -58,26 +64,12 @@
     </div>
   </div>
 </template>
-<script setup lang="ts">
-const toggleSidebar = () => {};
-</script>
+<script setup lang="ts"></script>
 
 <style lang="scss" scoped>
 #wrapper {
   #page-content-wrapper {
     background-color: #fff;
   }
-
-  /* min-height: 100vh;
-    #sidebar-wrapper {
-      width: 27em;
-      .sidebar-heading {
-      }
-    }
-    #page-content-wrapper {
-      .navbar {
-        height: 57px;
-      }
-    } */
 }
 </style>

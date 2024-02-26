@@ -1,6 +1,6 @@
 <template>
   <div class="welcome mt-4">
-    <h2 class="welcome-txt fs-4">Welcome! Tony Brown</h2>
+    <h2 class="welcome-txt fs-4">Student</h2>
     <!-- Button trigger modal -->
     <button
       type="button"
@@ -8,7 +8,7 @@
       data-bs-toggle="modal"
       data-bs-target="#staticBackdrop"
     >
-      + Add New Drive
+      + Add Students
     </button>
 
     <!-- Modal -->
@@ -24,7 +24,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel">New Drive</h5>
+            <h5 class="modal-title" id="staticBackdropLabel">New Student</h5>
             <button
               type="button"
               class="btn-close"
@@ -35,23 +35,23 @@
           <div class="modal-body">
             <form>
               <div class="m-3">
-                <label class="text-success fw-bolder" for="date">Date</label>
+                <label class="text-success fw-bolder" for="name"> Name</label>
                 <input
-                  type="date"
+                  type="text"
                   style="width: 100%; height: 40px"
                   class="form-control rounded border-1 border-secondary px-2"
                 />
               </div>
               <div class="m-3">
-                <label for="time" class="text-success fw-bolder"> Time</label>
+                <label for="text" class="text-success fw-bolder"> School</label>
                 <input
-                  type="time"
+                  type="text"
                   style="width: 100%; height: 40px"
                   class="form-control rounded border-1 border-secondary"
                 />
               </div>
               <div class="dropdown m-3">
-                <label class="text-success fw-bolder" for="location"
+                <label class="text-success fw-bolder" for="Location"
                   >Location</label
                 >
                 <select
@@ -79,41 +79,34 @@
       </div>
     </div>
   </div>
-  <div class="cards px-2 mt-4">
-    <div class="row">
-      <div class="col-lg-3 col-md-6 col-sm-6 g-4">
-        <div class="each-card d-flex justify-content-center align-items-center">
-          <div class="card-text text-center">
-            <h5 class="num">20</h5>
-            <h6>No Of Schools</h6>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 g-4">
-        <div class="each-card d-flex justify-content-center align-items-center">
-          <div class="card-text text-center">
-            <h5 class="num">100</h5>
-            <h6>No Of Students</h6>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 g-4">
-        <div class="each-card d-flex justify-content-center align-items-center">
-          <div class="card-text text-center">
-            <h5 class="num">25</h5>
-            <h6>No Of Staffs</h6>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 col-sm-6 g-4">
-        <div class="each-card d-flex justify-content-center align-items-center">
-          <div class="card-text text-center">
-            <h5 class="num">18</h5>
-            <h6>No Of Drives</h6>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="table-responsive mt-5">
+    <table class="table table-striped">
+      <tr>
+        <th>Name</th>
+        <th>School</th>
+        <th>Location</th>
+      </tr>
+      <tr>
+        <td>Adesoye Adebukola Kemisola</td>
+        <td>Adura Intl Model College</td>
+        <td>Mainland</td>
+      </tr>
+      <tr>
+        <td>Adekunle Timilehin Ibukunoluwa</td>
+        <td>Bisam College</td>
+        <td>Mainland</td>
+      </tr>
+      <tr>
+        <td>Adekunle Tioluwanimi Taiwo</td>
+        <td>Pade School of science</td>
+        <td>Island</td>
+      </tr>
+      <tr>
+        <td>Adekunle Kehinde Tijesu</td>
+        <td>Royal Crest Kiddied Colege</td>
+        <td>Mainland</td>
+      </tr>
+    </table>
   </div>
 </template>
 
@@ -125,7 +118,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .welcome-txt {
+      font-size: 8px;
+    }
   }
+
   @media only screen and (max-width: 576px) {
     .welcome {
       .welcome-txt {
@@ -136,17 +133,6 @@
         width: 100px;
         font-size: 12px;
       }
-    }
-  }
-}
-.cards {
-  .each-card {
-    height: 170px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-
-    .card-text .num {
-      font-size: 30px;
-      font-weight: 700;
     }
   }
 }

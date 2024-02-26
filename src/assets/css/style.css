@@ -19,14 +19,29 @@
 
 #page-content-wrapper {
   min-width: 100vw;
+
+  .toggle-icons {
+    .btn {
+      border: 1px solid grey;
+    }
+
+    .btn:focus {
+      box-shadow: none;
+    }
+  }
 }
 
 body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
   margin-left: 0;
 }
-#sidebarToggle {
-  display: block;
+#sidebarToggleClose {
+  display: none;
+
+  .close-button {
+    font-size: 22px;
+  }
 }
+
 #initials {
   height: 40px;
   width: 40px;
@@ -37,6 +52,10 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
   #sidebarToggle {
     display: none;
   }
+  #sidebarToggleClose {
+    display: none;
+  }
+
   #sidebar-wrapper {
     margin-left: 0;
   }

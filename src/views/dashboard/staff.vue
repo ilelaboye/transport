@@ -1,14 +1,14 @@
 <template>
   <div class="welcome mt-4">
-    <h2>Staff</h2>
+    <h2 class="welcome-txt fs-4">Staff</h2>
     <!-- Button trigger modal -->
     <button
       type="button"
-      class="btn btn-success"
+      class="new btn btn-success"
       data-bs-toggle="modal"
       data-bs-target="#staticBackdrop"
     >
-      + Add New Staff
+      + Add Staff
     </button>
 
     <!-- Modal -->
@@ -81,47 +81,27 @@
       </div>
     </div>
   </div>
-  <div class="table">
-    <table border="1">
+  <div class="table-responsive mt-5">
+    <table class="table table-striped">
       <tr>
         <th>Name</th>
         <th>Phone Number</th>
         <th>Location</th>
       </tr>
       <tr>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>Adesoye Adebukola Kemisola</td>
+        <td>08160900520</td>
+        <td>Mainland</td>
       </tr>
       <tr>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>Adekunle Timilehin Ibukunoluwa</td>
+        <td>08149948382</td>
+        <td>Mainland</td>
       </tr>
       <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>Adekunle Tioluwanimi Taiwo</td>
+        <td>09123344567</td>
+        <td>Island</td>
       </tr>
     </table>
   </div>
@@ -135,18 +115,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .welcome-txt {
+      font-size: 8px;
+    }
   }
-  table {
-    margin: 40px 20px 20px 0px;
-    width: 100%;
-    text-align: center;
-
-    tr {
-      height: 40px;
-
-      th {
-        background-color: rgb(65, 136, 76);
-        color: #fff;
+  @media only screen and (max-width: 576px) {
+    .welcome {
+      .welcome-txt {
+        font-size: 8px;
+      }
+      .new {
+        padding: 10px 0px;
+        width: 100px;
+        font-size: 12px;
       }
     }
   }
