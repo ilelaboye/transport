@@ -67,6 +67,8 @@
 
 <script lang="ts">
 import { ref, defineComponent } from "vue";
+import { useToast } from "vue-toast-notification";
+import "vue-toast-notification/dist/theme-sugar.css";
 
 export default defineComponent({
   name: "login-page",

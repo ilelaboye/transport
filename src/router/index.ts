@@ -5,6 +5,7 @@ import Staff from "@/views/dashboard/staff.vue";
 import Schools from "@/views/dashboard/schools.vue";
 
 import Students from "@/views/dashboard/students.vue";
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -30,6 +31,7 @@ const router = createRouter({
         },
       ],
     },
+
     {
       path: "/login",
       name: "Login",

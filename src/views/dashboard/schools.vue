@@ -1,6 +1,6 @@
 <template>
   <div class="welcome mt-4">
-    <h2 class="welcome-txt fs-4">School</h2>
+    <h2 class="welcome-txt fs-4">Schools</h2>
     <!-- Button trigger modal -->
     <button
       type="button"
@@ -81,33 +81,12 @@
       </div>
     </div>
   </div>
-  <div class="table-responsive mt-5">
-    <table class="table table-striped">
-      <tr>
-        <th>Name</th>
-        <th>Phone Number</th>
-        <th>Location</th>
-      </tr>
-      <tr>
-        <td>Loyola group of schools</td>
-        <td>08160900520</td>
-        <td>Mainland</td>
-      </tr>
-      <tr>
-        <td>Pade School of science</td>
-        <td>08149948382</td>
-        <td>Mainland</td>
-      </tr>
-      <tr>
-        <td>Royal Crest Kiddes College</td>
-        <td>09123344567</td>
-        <td>Island</td>
-      </tr>
-    </table>
-  </div>
+  <Schtable></Schtable>
 </template>
 
-<script lang="ts"></script>
+<script lang="ts" setup>
+import Schtable from "@/components/tables/schtable.vue";
+</script>
 
 <style lang="scss" scoped>
 #page-content {
